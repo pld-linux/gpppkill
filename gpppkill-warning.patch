@@ -1,0 +1,11 @@
+--- gpppkill-1.0.3/Makefile.orig	2004-08-29 20:16:05.000000000 +0200
++++ gpppkill-1.0.3/Makefile	2004-08-29 20:15:53.000000000 +0200
+@@ -4,7 +4,7 @@
+ 
+ # Redhat 6.x
+ CC	= g++
+-CFLAGS  = -Wall -g -Wno-unused -DGTK_DISABLE_COMPAT_H #-pedantic  
++CFLAGS  = -Wall -g -Wno-unused -Wno-deprecated -DGTK_DISABLE_COMPAT_H #-pedantic  
+ # no hace falta sacar la opcion -g porque uso 'install -s'
+ #CFLAGS  = -Wall -Wno-unused -DGTK_DISABLE_COMPAT_H
+ INCLUDE = `gtk-config --cflags`
