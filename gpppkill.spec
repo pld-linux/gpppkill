@@ -1,10 +1,12 @@
 Summary:   Finishes idle ppp connection. X11/gtk+ program.
+Summary(pl):   Program X11/GTK+ koñcz±cy nieaktywne po³±czenie ppp.
 Name:      gpppkill
 Version:   1.0.2
 Release:   1
 Serial:    1
 Copyright: GPL
 Group:     Applications/Internet
+Group(pl):     Aplikacje/Internet
 
 Source:    gpppkill-1.0.2.tar.gz
 
