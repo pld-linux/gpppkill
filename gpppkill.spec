@@ -32,7 +32,7 @@ wszystkie pppd i pyta, którego u¿yæ.
 %setup -q
 
 %build
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
