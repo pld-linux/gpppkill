@@ -1,16 +1,17 @@
 Summary:	Finishes idle ppp connection. X11/gtk+ program
 Summary(pl):	Program X11/GTK+ koñcz±cy nieaktywne po³±czenie ppp
 Name:		gpppkill
-Version:	1.0.2
-Release:	1
+Version:	1.0.3
+Release:	0.1
 Epoch:		1
 License:	GPL
 Vendor:		The gpppkill Team
 Group:		X11/Applications/Networking
+Patch0:		%{name}-warning.patch
 # Native URL is http: only, but we prefer ftp:
 # Source0:	http://www.pla.net.py/home/oliver/gpppkill/archive/%{name}-%{version}.tar.gz
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/network/serial/ppp/%{name}-%{version}.tar.gz
-# Source0-md5:	760e1a8fa56ebaddfb0c5dd9d8d5cb93
+# Source0-md5:	222279e531a57ff21b918d04561146ba
 URL:		http://www.pla.net.py/home/oliver/gpppkill/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	gpppkill
@@ -30,6 +31,7 @@ wszystkie pppd i pyta, którego u¿yæ.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make}
