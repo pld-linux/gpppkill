@@ -14,8 +14,6 @@ URL:		http://www.pla.net.py/home/oliver/gpppkill/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	gpppkill
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 gpppkill is a X11 program for Linux that finishes the ppp connection
