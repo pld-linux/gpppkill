@@ -3,12 +3,13 @@ Summary(pl):	Program X11/GTK+ koñcz±cy nieaktywne po³±czenie ppp
 Name:		gpppkill
 Version:	1.0.2
 Release:	1
-Serial:		1
+Epoch:		1
 License:	GPL
 Vendor:		The gpppkill Team
 Group:		X11/Applications/Networking
+Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
-Source0:	gpppkill-1.0.2.tar.gz
+Source0:	http://www.pla.net.py/home/oliver/gpppkill/archive/%{name}-%{version}.tar.gz
 URL:		http://www.pla.net.py/home/oliver/gpppkill/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	gpppkill
