@@ -26,7 +26,7 @@ GUI. Detects all pppds and let you choose which to use.
 %description -l pl
 gpppkill to program dla X, który koñczy po³±czenie ppp je¶li w danym
 okresie czasu nie otrzyma minimalnej ilo¶ci bajtów. Ukazuje on równie¿
-ruch ppp w formie grafu. Konfiguruje sie go za pomoc± GUI. Wykrywa
+ruch ppp w formie grafu. Konfiguruje siê go za pomoc± GUI. Wykrywa
 wszystkie pppd i pyta, którego u¿yæ.
 
 %prep
