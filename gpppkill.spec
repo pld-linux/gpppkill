@@ -8,7 +8,7 @@ Group:     Applications/Internet
 
 Source:    gpppkill-1.0.2.tar.gz
 
-BuildRoot: /var/tmp/%{name}-%{version}
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:  gpppkill
 
 Vendor:    The gpppkill Team
