@@ -23,6 +23,12 @@ not receive a minimal amount of bytes during certain time.
 It also show the ppp traffic in a graph. Al configuration is done via the GUI.
 Detects all pppds and let you choose which to use.
 
+%description -l pl
+gpppkill to program dla X, który koñczy po³±czenie ppp je¶li w danym okresie 
+czasu nie otrzyma minimalnej ilo¶ci bajtów. Ukazuje on równie¿ ruch ppp
+w formie grafu. Konfiguruje sie go za pomoc± GUI. Wykrywa wszystkie pppd
+i pyta, którego u¿yæ.
+
 %changelog
 * Tue Aug 17 1999 Oliver Schulze L. <oliver@pla.net.py>
 - can change the size of the dialog windows any more.
