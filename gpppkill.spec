@@ -10,6 +10,7 @@ Group:		X11/Applications/Networking
 # Native URL is http: only, but we prefer ftp:
 # Source0:	http://www.pla.net.py/home/oliver/gpppkill/archive/%{name}-%{version}.tar.gz
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/network/serial/ppp/%{name}-%{version}.tar.gz
+# Source0-md5:	760e1a8fa56ebaddfb0c5dd9d8d5cb93
 URL:		http://www.pla.net.py/home/oliver/gpppkill/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	gpppkill
