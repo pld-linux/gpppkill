@@ -13,8 +13,8 @@ Patch0:		%{name}-warning.patch
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/network/serial/ppp/%{name}-%{version}.tar.gz
 # Source0-md5:	222279e531a57ff21b918d04561146ba
 URL:		http://www.pla.net.py/home/oliver/gpppkill/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	gpppkill
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
 %description
@@ -38,14 +38,15 @@ wszystkie pppd i pyta, którego u¿yæ.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_prefix}/X11R6/bin
 
-install -d ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin
-%{__make} install DESTDIR=${RPM_BUILD_ROOT}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README CHANGELOG
+%doc CHANGELOG README
 %attr(755,root,root) %{_bindir}/*
