@@ -7,15 +7,15 @@ Epoch:		1
 License:	GPL
 Vendor:		The gpppkill Team
 Group:		X11/Applications/Networking
-Patch0:		%{name}-warning.patch
 # Native URL is http: only, but we prefer ftp:
 # Source0:	http://www.pla.net.py/home/oliver/gpppkill/archive/%{name}-%{version}.tar.gz
 Source0:	ftp://metalab.unc.edu/pub/Linux/system/network/serial/ppp/%{name}-%{version}.tar.gz
 # Source0-md5:	222279e531a57ff21b918d04561146ba
+Patch0:		%{name}-warning.patch
 URL:		http://www.pla.net.py/home/oliver/gpppkill/
-Provides:	gpppkill
+BuildRequires:	gtk+-devel
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 gpppkill is a X11 program for Linux that finishes the ppp connection
@@ -26,7 +26,7 @@ GUI. Detects all pppds and let you choose which to use.
 %description -l pl
 gpppkill to program dla X, który koñczy po³±czenie ppp je¶li w danym
 okresie czasu nie otrzyma minimalnej ilo¶ci bajtów. Ukazuje on równie¿
-ruch ppp w formie grafu. Konfiguruje siê go za pomoc± GUI. Wykrywa
+ruch ppp w formie wykresu. Konfiguruje siê go za pomoc± GUI. Wykrywa
 wszystkie pppd i pyta, którego u¿yæ.
 
 %prep
@@ -34,19 +34,20 @@ wszystkie pppd i pyta, którego u¿yæ.
 %patch0 -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cxx}" \
+	CFLAGS="%{rpmcxxflags} -Wall -Wno-unused -Wno-deprecated -fpermissive -DGTK_DISABLE_COMPAT_H"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/X11R6/bin
+install -d $RPM_BUILD_ROOT%{_bindir}
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+install gpppkill $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG README
+%doc CHANGELOG CONTRIBUTORS README
 %attr(755,root,root) %{_bindir}/*
