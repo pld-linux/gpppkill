@@ -1,5 +1,5 @@
 Summary:	Finishes idle ppp connection. X11/gtk+ program
-Summary(pl):	Program X11/GTK+ koñcz±cy nieaktywne po³±czenie ppp
+Summary(pl.UTF-8):   Program X11/GTK+ koÅ„czÄ…cy nieaktywne poÅ‚Ä…czenie ppp
 Name:		gpppkill
 Version:	1.0.3
 Release:	0.1
@@ -23,11 +23,11 @@ if it not receive a minimal amount of bytes during certain time. It
 also show the ppp traffic in a graph. Al configuration is done via the
 GUI. Detects all pppds and let you choose which to use.
 
-%description -l pl
-gpppkill to program dla X, który koñczy po³±czenie ppp je¶li w danym
-okresie czasu nie otrzyma minimalnej ilo¶ci bajtów. Ukazuje on równie¿
-ruch ppp w formie wykresu. Konfiguruje siê go za pomoc± GUI. Wykrywa
-wszystkie pppd i pyta, którego u¿yæ.
+%description -l pl.UTF-8
+gpppkill to program dla X, ktÃ³ry koÅ„czy poÅ‚Ä…czenie ppp jeÅ›li w danym
+okresie czasu nie otrzyma minimalnej iloÅ›ci bajtÃ³w. Ukazuje on rÃ³wnieÅ¼
+ruch ppp w formie wykresu. Konfiguruje siÄ™ go za pomocÄ… GUI. Wykrywa
+wszystkie pppd i pyta, ktÃ³rego uÅ¼yÄ‡.
 
 %prep
 %setup -q
