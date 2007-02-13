@@ -1,5 +1,5 @@
 Summary:	Finishes idle ppp connection. X11/gtk+ program
-Summary(pl.UTF-8):   Program X11/GTK+ kończący nieaktywne połączenie ppp
+Summary(pl.UTF-8):	Program X11/GTK+ kończący nieaktywne połączenie ppp
 Name:		gpppkill
 Version:	1.0.3
 Release:	0.1
