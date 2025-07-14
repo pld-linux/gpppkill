@@ -31,7 +31,7 @@ wszystkie pppd i pyta, którego użyć.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} \
